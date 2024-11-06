@@ -1,0 +1,553 @@
+.contactFill {
+	position: absolute !important;
+	z-index: -1 !important;
+	top: 950px !important;
+	right: 0 !important;
+}
+
+.midForm {
+	margin-top: 200px !important;
+	justify-content: center !important;
+}
+
+.contactFillTop {
+	position: absolute !important;
+	z-index: -2 !important;
+	top: -250px !important;
+	right: 0 !important;
+}
+
+.midmid {
+	margin: 0 20px !important;
+}
+
+.midForm-left {
+	display: flex !important;
+	justify-content: center !important;
+}
+
+.midForm-right {
+	width: 300px !important;
+	font-family: 'Mulish' !important;
+	font-style: normal !important;
+	font-size: 20px !important;
+	line-height: 36px !important;
+	letter-spacing: -0.4px !important;
+	color: #DDDDDD !important;
+	display: flex !important;
+	flex-direction: column !important;
+}
+
+.midForm-right-1 {
+	font-family: 'Mulish' !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	font-size: 14px !important;
+	line-height: 27px !important;
+	letter-spacing: -0.28px !important;
+	color: #C54D1F !important;
+}
+
+.midForm-right-2 {
+	font-weight: 600 !important;
+	font-size: 20px !important;
+	line-height: 36px !important;
+	letter-spacing: -0.4px !important;
+	display: flex !important;
+}
+
+.midForm-right-3 {
+	margin-left: 80px !important;
+}
+
+.contactSpikeTop {
+	position: absolute !important;
+	left: -20px !important;
+	z-index: -1 !important;
+	top: 130px !important;
+}
+
+.contactText {
+	font-family: 'Mulish' !important;
+	font-style: normal !important;
+	font-weight: 600 !important;
+	font-size: 24px !important;
+	line-height: 36px !important;
+	text-align: left !important;
+	letter-spacing: -0.48px !important;
+	color: #dddddd !important;
+	margin-top: 50px !important;
+	width: 90% !important;
+}
+
+.midForm-right-text {
+	width: 50% !important;
+}
+
+.contactSpikeMid {
+	display: none !important;
+}
+
+@media screen and (max-width:1025px) {
+
+	.contactSpikeMid {
+		position: absolute !important;
+		z-index: -1 !important;
+		right: 0 !important;
+		display: block !important;
+		top: 850px !important;
+	}
+
+	.contactSpikeTop {
+		display: none !important;
+	}
+
+	.contactText {
+		width: 90% !important;
+		text-align: center !important;
+	}
+
+	.contactFill {
+		display: none !important;
+	}
+
+	.contactFillTop {
+		display: none !important;
+	}
+
+	.midForm-left {
+		padding-right: 0 !important;
+		justify-content: center !important;
+	}
+
+	.midForm {
+		margin-top: 100px !important;
+		justify-content: center !important;
+	}
+
+	.midForm-right {
+		margin-top: 70px !important;
+		width: 327px !important;
+		padding-left: 0 !important;
+		justify-content: center !important;
+	}
+
+	.midForm-right-2 {
+		flex-direction: column !important;
+	}
+
+	.midForm-right-3 {
+		margin-left: 0 !important;
+		margin-top: 60px !important;
+	}
+
+	.midForm-right-text {
+		padding-left: 50px !important;
+		width: 80% !important;
+	}
+}
+
+.spike {
+	position: absolute !important;
+	top: 620px !important;
+	right: 0 !important;
+}
+
+.contact-container {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	justify-content: center !important;
+}
+
+.information-set {
+	width: 50% !important;
+	padding: 20px !important;
+}
+
+.contact-form-container {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+}
+
+
+.inputBox::placeholder {
+	padding-left: 10px;
+	font-family: 'Mulish' !important;
+	font-style: normal !important;
+}
+
+.inputBox {
+	width: 100% !important;
+	height: 52px !important;
+	border: 8px !important;
+	background-color: #373368 !important;
+	border-radius: 8px !important;
+	color: #DDDDDD !important;
+	border: none;
+	padding-left: 10px;
+}
+
+.inputBox:focus {
+	outline: none;
+}
+
+.textareaBox {
+	width: 100% !important;
+	height: 204px !important;
+	border: 8px !important;
+	background: #373368 !important;
+	border-radius: 8px !important;
+	color: #DDDDDD !important;
+	padding: 15px !important;
+	font-family: 'Mulish' !important;
+}
+
+.textareaBox::placeholder {
+	font-family: 'Mulish' !important;
+	font-style: normal !important;
+	color: #777 !important;
+}
+
+.textareaBox:focus {
+	outline: none !important;
+}
+
+
+.contactemailBox {
+	width: 577.72px !important;
+	height: 27px !important;
+	left: calc(50% - 577.72px/2) !important;
+	top: calc(50% - 27px/2 - 18px) !important;
+	font-family: 'Mulish' !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	font-size: 16px !important;
+	line-height: 27px !important;
+	letter-spacing: -0.28px !important;
+	color: #C54D1F !important;
+
+}
+
+.contactemaildataBox {
+	width: 577.6px !important;
+	height: 36px !important;
+	left: calc(50% - 577.6px/2 - 0.06px) !important;
+	top: calc(50% - 36px/2 + 13.5px) !important;
+	font-family: 'Mulish' !important;
+	font-style: normal !important;
+	font-weight: 600 !important;
+	font-size: 22px !important;
+	line-height: 36px !important;
+	letter-spacing: -0.4px !important;
+	color: #DDDDDD !important;
+}
+
+.contactaddressdataBox {
+	width: 577.6px !important;
+	height: 108px !important;
+	left: calc(50% - 577.6px/2) !important;
+	top: calc(50% - 108px/2 + 13.5px) !important;
+	font-family: 'Mulish' !important;
+	font-style: normal !important;
+	font-weight: 700 !important;
+	font-size: 28px !important;
+	line-height: 36px !important;
+	letter-spacing: -0.4px !important;
+	color: #DDDDDD !important;
+}
+
+.contactnumberdataBox {
+	width: 577.6px !important;
+	height: 36px !important;
+	left: calc(50% - 577.6px/2 - 0.06px) !important;
+	top: calc(50% - 36px/2 + 13.5px) !important;
+	font-family: 'Mulish' !important;
+	font-style: normal !important;
+	font-weight: 600 !important;
+	font-size: 22px !important;
+	line-height: 36px !important;
+	letter-spacing: -0.4px !important;
+	color: #DDDDDD !important;
+}
+
+.contactlastBox {
+	font-family: 'Mulish' !important;
+	font-style: normal !important;
+	font-weight: 300 !important;
+	font-size: 60px !important;
+	line-height: 72px !important;
+	text-align: center !important;
+	letter-spacing: -1.2px !important;
+	color: #DDDDDD !important;
+}
+
+.contactfirst {
+	height: 39px !important;
+	left: 0% !important;
+	right: 0.12% !important;
+	top: calc(50% - 39px/2 - 285.2px) !important;
+	font-family: 'Mulish' !important;
+	font-style: normal !important;
+	font-weight: 300 !important;
+	font-size: 32px !important;
+	line-height: 38px !important;
+	letter-spacing: -0.64px !important;
+	color: #DDDDDD !important;
+}
+
+.contactstartgrid {
+	font-family: 'Mulish' !important;
+	width: 80%;
+	font-style: normal !important;
+	font-weight: 700 !important;
+	font-size: 88px !important;
+	line-height: 88px !important;
+	letter-spacing: -1.6px !important;
+	color: #DDDDDD !important;
+}
+
+.social-icon {
+	border: 1px solid #C44D1F !important;
+	border-radius: 50% !important;
+	height: 50px !important;
+	width: 50px !important;
+	margin-right: 10px !important;
+	margin-top: -60px !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+}
+
+.contactwhereBox {
+	height: 39px !important;
+	left: 0% !important;
+	right: 0.12% !important;
+	top: calc(50% - 39px/2 + 285.8px) !important;
+	font-family: 'Mulish' !important;
+	font-style: normal !important;
+	font-weight: 300 !important;
+	font-size: 32px !important;
+	line-height: 38px !important;
+	letter-spacing: -0.64px !important;
+	color: #DDDDDD !important;
+}
+
+.contactmap {
+	width: 100% !important;
+	height: 600px !important;
+	border-radius: 4px !important;
+	margin-bottom: 10% !important;
+}
+
+.mid-box {
+	height: 900px !important;
+}
+
+#map {
+	width: 90% !important;
+}
+
+#map {
+	width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+	#map {
+		width: 90% !important;
+	}
+
+	.contact-container {
+		grid-template-columns: 100% 0% !important;
+	}
+
+	.contactstartgrid-gap {
+		height: 30px !important;
+	}
+
+	.contactstartgrid-gap {
+		height: 30px;
+	}
+
+	.contactmap {
+		width: 100% !important;
+		height: 400px !important;
+		border-radius: 4px !important;
+	}
+
+	.contactfirst {
+		height: 39px !important;
+		left: 0% !important;
+		right: 0.12% !important;
+		top: calc(50% - 39px/2 - 285.2px) !important;
+		font-family: 'Mulish' !important;
+		font-style: normal !important;
+		font-weight: 300 !important;
+		font-size: 27px !important;
+		line-height: 38px !important;
+		margin: center !important;
+		letter-spacing: -0.64px !important;
+		text-align: center !important;
+		color: #DDDDDD !important;
+	}
+
+	.inputBox::placeholder {
+		height: 19px !important;
+		left: calc(50% - 44px/2 - 125.5px) !important;
+		top: calc(50% - 19px/2) !important;
+		font-family: 'Mulish' !important;
+		font-style: normal !important;
+		font-weight: 400 !important;
+		font-size: 16px !important;
+		line-height: 19px !important;
+		letter-spacing: -0.32px !important;
+		color: #808080 !important;
+	}
+
+	.inputBox {
+		width: 100% !important;
+		height: 52px !important;
+		border: 8px !important;
+		background-color: #373368 !important;
+		border-radius: 8px !important;
+	}
+
+	.textareaBox {
+		width: 100% !important;
+		border: 8px !important;
+		background: #373368 !important;
+		border-radius: 8px !important;
+		font-family: 'Mulish' !important;
+	}
+
+	.textareaBox::placeholder {
+		height: 19px !important;
+		left: calc(50% - 65px/2 - 115px) !important;
+		top: calc(50% - 19px/2 - 76px) !important;
+		font-family: 'Mulish' !important;
+		font-style: normal !important;
+		font-weight: 400 !important;
+		font-size: 16px !important;
+		line-height: 19px !important;
+		letter-spacing: -0.32px !important;
+		color: #808080 !important;
+
+	}
+
+	.contactemailBox {
+		width: 315px !important;
+		height: 27px !important;
+		left: calc(50% - 577.72px/2) !important;
+		top: calc(50% - 27px/2 - 18px) !important;
+		font-family: 'Mulish' !important;
+		font-style: normal !important;
+		font-weight: 400 !important;
+		font-size: 14px !important;
+		line-height: 27px !important;
+		letter-spacing: -0.28px !important;
+		color: #C54D1F !important;
+	}
+
+	.secondgrid {
+		margin-top: 200px !important;
+	}
+
+	.contactstartgrid {
+		height: 120px !important;
+		width: 326.0400085449219px !important;
+		left: 0px !important;
+		top: 41px !important;
+		border-radius: nullpx !important;
+		height: 120px !important;
+		left: 0% !important;
+		right: 0.57% !important;
+		top: calc(50% - 120px/2 - 59px) !important;
+		font-family: 'Mulish' !important;
+		font-style: normal !important;
+		font-weight: 700 !important;
+		font-size: 48px !important;
+		line-height: 50px !important;
+		text-align: center !important;
+		letter-spacing: -0.96px !important;
+		color: #DDDDDD !important;
+	}
+
+	.contactemaildataBox {
+		width: 315px !important;
+		height: 36px !important;
+		left: calc(50% - 577.6px/2 - 0.06px) !important;
+		top: calc(50% - 36px/2 + 13.5px) !important;
+		font-family: 'Mulish' !important;
+		font-style: normal !important;
+		font-weight: 600 !important;
+		font-size: 20px !important;
+		line-height: 26px !important;
+		letter-spacing: -0.4px !important;
+		color: #DDDDDD !important;
+	}
+
+	.contactaddressdataBox {
+		width: 315px !important;
+		height: 144px !important;
+		left: calc(50% - 578px/2) !important;
+		top: calc(50% - 144px/2 + 13.5px) !important;
+		font-family: 'Mulish' !important;
+		font-style: normal !important;
+		font-weight: 700 !important;
+		font-size: 20px !important;
+		line-height: 26px !important;
+		letter-spacing: -0.4px !important;
+		color: #DDDDDD !important;
+	}
+
+	.contactnumberdataBox {
+		width: 315px !important;
+		height: 36px !important;
+		left: calc(50% - 577.6px/2 - 0.06px) !important;
+		top: calc(50% - 36px/2 + 13.5px) !important;
+		font-family: 'Mulish' !important;
+		font-style: normal !important;
+		font-weight: 600 !important;
+		font-size: 20px !important;
+		line-height: 26px !important;
+		letter-spacing: -0.4px !important;
+		color: #DDDDDD !important;
+	}
+
+	.social-icon {
+		border: 1px solid #C44D1F !important;
+		border-radius: 50% !important;
+		height: 50px !important;
+		width: 50px !important;
+		margin-right: -10px !important;
+		margin-top: -10px !important;
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+	}
+
+	.contactlastBox {
+		font-family: 'Mulish' !important;
+		font-style: normal !important;
+		font-size: 24px !important;
+		line-height: 29px !important;
+		text-align: center !important;
+		letter-spacing: -0.48px !important;
+		color: #DDDDDD !important;
+	}
+
+	.contactwhereBox {
+		height: 39px !important;
+		left: 0% !important;
+		right: 0.2% !important;
+		top: calc(50% - 39px/2 + 564.8px) !important;
+		font-family: 'Mulish' !important;
+		font-style: normal !important;
+		font-weight: 300 !important;
+		font-size: 32px !important;
+		line-height: 38px !important;
+		letter-spacing: -0.64px !important;
+		color: #DDDDDD !important;
+	}
+
+}

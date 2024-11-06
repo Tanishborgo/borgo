@@ -1,0 +1,232 @@
+.main{
+    font-family: 'Mulish' !important;
+    font-style: normal !important;
+    /* border: 1px solid white !important; */
+    display: flex !important;
+    font-family: 'Mulish' !important;
+    font-style: normal !important;
+    color: #DDDDDD !important;
+    height: 854px !important;
+    width: 497px !important;
+    position: relative !important;
+    display: flex !important;justify-content: center !important;
+}
+.icon{
+    display: none !important;
+}
+
+.head{
+    font-weight: 700 !important;
+    font-size: 52px !important;
+    line-height: 88px !important;
+    letter-spacing: -1.04px !important;
+    margin-bottom: 25px !important;
+    margin-top: 20px !important;
+    
+}
+.text{
+    font-weight: 400 !important;
+    font-size: 24px !important;
+    line-height: 27px !important;
+    text-align: center !important;
+    letter-spacing: -0.48px !important;   
+    display: flex !important;justify-content: center !important;
+}
+.card1{
+    display: none !important;
+}
+.card-box{
+    position: absolute !important;
+    z-index: -1 !important;
+}
+.cardflex{
+    position: absolute !important;
+    display: flex !important;
+    align-items: center !important;justify-content: center !important;flex-direction: column !important;
+    /* width:90% !important; */
+    margin-top: 80px !important;
+}
+
+.text-fix{
+    width: 80% !important;
+}
+
+@media screen and (max-width: 1020px) {
+    .icon{
+        display: block !important;
+    }
+    .iconBig{
+        display: none !important;
+    }
+    .main{
+        /* border: 1px solid white !important; */
+        display: flex !important;
+        font-family: 'Mulish' !important;
+        font-style: normal !important;
+        color: #DDDDDD !important;
+        height: 561.8873291015625px !important;
+        width: 327px !important;
+        position: relative !important;
+        display: flex !important;justify-content: center !important;
+    }
+    .card1{display: block !important;}
+    .card2{
+        display: none !important;
+    }
+    .head{
+        font-weight: 700 !important;
+        font-size: 32px !important;
+        letter-spacing: -0.64px !important;
+        line-height: 58px !important;
+        margin-top: 30px !important;
+        margin-bottom: 10px !important;
+    }
+    .text{
+        font-weight: 400 !important;
+        font-size: 11.8431px !important;
+        line-height: 18px !important;
+        text-align: center !important;
+        letter-spacing: -0.236861px !important;
+    }
+    .card-box{
+        position: absolute !important;
+        z-index: -1 !important;
+    }
+    .cardflex{
+        position: absolute !important;
+        /* border: 1px solid white !important; */
+        display: flex !important;
+        align-items: center !important;justify-content: center !important;flex-direction: column !important;
+        /* width:270px !important; */
+        margin-top: 60px !important;
+    }
+    
+}
+
+
+
+/* for right card card  */
+.main2{
+    /* border: 1px solid white !important; */
+    font-family: 'Mulish' !important;
+    font-style: normal !important;
+    color: #DDDDDD !important;
+    height: 1171px !important;
+    width: 497px !important;
+    display: flex !important;
+    position: relative !important;
+    display: flex !important;justify-content: center !important;
+
+}
+.cardImage{
+    background-image: url('/assests/News/Group24.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    background-position: top center !important;
+}
+
+.content{
+    /* border: 1px solid white !important; */
+    /* position:absolute !important; */
+    /* z-index: 3 !important; */
+    display: flex !important;flex-direction: column !important;align-items: center !important;
+    margin-top:380px !important;
+
+}
+.head2{
+    font-weight: 700 !important;
+    font-size: 52px !important;
+    line-height: 88px !important;
+    letter-spacing: -1.04px !important;
+}
+.text2{
+    font-weight: 400 !important;
+    font-size: 24px !important;
+    line-height: 36px !important;
+    text-align: center !important;
+    letter-spacing: -0.48px !important;
+
+    margin-top: 10px !important;
+    width: 85% !important;
+}
+.red2{
+    font-weight: 400 !important;
+    font-size: 24px !important;
+    line-height: 36px !important;
+    text-align: center !important;
+    letter-spacing: -0.48px !important;
+    color: #C54D1F !important;
+    text-decoration: none;
+}
+
+.card3{
+    width: 100% !important;
+    height: 100% !important;
+    display: none !important;
+}
+.card4{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media screen and (max-width: 1020px) {
+
+    .content{
+        top: 250px !important;
+    }
+    .card3{
+        display: block !important;
+    }
+    .card4{
+        display: none !important;
+    }
+
+    .main2{
+        height: 561px !important;
+        width: 327px !important;
+        
+    }
+    .cardImage{
+        background-image: url('/assests/News/Group7.png') !important;
+        background-repeat: no-repeat !important;
+        background-size: 100% 100% !important;
+        background-position: top center !important;
+    }
+
+    .head2{
+        font-size: 40px !important;
+        line-height: 58px !important;
+        letter-spacing: -0.8px !important;
+    }
+    .text2{
+        font-size: 11.8431px !important;
+        line-height: 18px !important;
+        text-align: center !important;
+        letter-spacing: -0.236861px !important;
+        margin-top: 10px !important;
+    }
+    .red2{
+        font-size: 11.8431px !important;
+        line-height: 18px !important;
+        text-align: center !important;
+        letter-spacing: -0.236861px !important;
+        text-decoration: none;
+    }
+
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .content{
+        display: flex !important;flex-direction: column !important;align-items: center !important;
+        margin-top: 250px !important;
+    }
+    .card3{
+        display: flex !important;
+    }
+    .card4{
+        display: none !important;
+    }
+}
