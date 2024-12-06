@@ -262,11 +262,7 @@ export default function Navbar(props) {
                                 Blog
                             </Button>
                         </Link>
-                        <Link href="/contact" style={{ textDecoration: 'none' }}>
-                            <Button className="font-mulish color-light-grey weight-700 font-16" sx={{ textTransform: 'capitalize' }}>
-                                Contact
-                            </Button>
-                        </Link>
+                       
                         <Link href="/policies" style={{ textDecoration: 'none' }}>
                             <Button className="font-mulish color-light-grey weight-700 font-16" sx={{ textTransform: 'capitalize' }}>
                                 Policies
