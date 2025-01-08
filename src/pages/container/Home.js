@@ -469,7 +469,7 @@ export default function Home() {
                 <div className="display-none-sm position-absolute right-0 fig-2">
                     <Image src={Fill3} width="100%" height="100%" />
                 </div>
-                 <div style={{ marginBottom: "60px", marginTop: "60px" }} className="div-center">
+                 <div style={{ marginBottom: "60px", marginTop: "60px",padding:10 }} className="div-center">
                     <iframe
                         width="560"
                         height="315"
