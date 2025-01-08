@@ -449,7 +449,6 @@ export default function Home() {
                             priority={true}
                             alt="main-spike"
                             className="div-center123"
-                            style={{ width: 100, height: 100, position: "absolute", right: 250, top: 0 }}
                         />
                  
                 </Typography>
