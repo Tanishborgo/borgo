@@ -441,8 +441,17 @@ export default function Home() {
                 >
                     WELCOME TO BORGO
                 </Typography>
-                <Typography className="weight-700 color-light-grey text-center font-70 font-48-sm font-mulish">
+               <Typography style={{ position: "relative" }} className="weight-700  color-light-grey text-center font-70 font-48-sm font-mulish">
                     Accounting Redefined
+                   
+                        <Image
+                            src={Logo}
+                            priority={true}
+                            alt="main-spike"
+                            className="div-center123"
+                            style={{ width: 100, height: 100, position: "absolute", right: 250, top: 0 }}
+                        />
+                 
                 </Typography>
                 <Typography
                     className="weight-600 color-light-grey text-center font-18 font-21-sm width-50 width-80-sm margin-auto font-mulish"
@@ -461,13 +470,17 @@ export default function Home() {
                 <div className="display-none-sm position-absolute right-0 fig-2">
                     <Image src={Fill3} width="100%" height="100%" />
                 </div>
-                <div style={{ marginBottom: "60px" }} className="div-center">
-                    <Image
-                        src={Logo}
-                        priority={true}
-                        alt="main-spike"
-                        className={styles["main-figure"]}
-                    />
+                 <div style={{ marginBottom: "60px", marginTop: "60px" }} className="div-center">
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/RHn7QrCN9mc?si=RWAHK7KCsxu1K2Zp&rel=0&autoplay=1&controls=0"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                    ></iframe>
                 </div>
             </Box>
 
