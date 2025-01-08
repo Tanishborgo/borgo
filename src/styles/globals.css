@@ -1351,7 +1351,14 @@ body {
 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
   color: #ffffff !important;
 }
-@media screen and (max-width: 1420px) {
+.div-center123 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+
+}
+
+@media screen and (max-width: 700px) {
   .div-center123 {
     display: none;
   }
