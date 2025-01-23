@@ -469,17 +469,19 @@ export default function Home() {
                 <div className="display-none-sm position-absolute right-0 fig-2">
                     <Image src={Fill3} width="100%" height="100%" />
                 </div>
-               <div style={{ marginBottom: "60px", marginTop: "60px",padding:10 }} className="div-center">
-                    <iframe
+               <div style={{ marginBottom: "60px", marginTop: "60px", padding: 10 }} className="div-center">
+                    <video
                         width="560"
                         height="315"
-                        src="https://www.youtube.com/embed/RHn7QrCN9mc?si=RWAHK7KCsxu1K2Zp&rel=0&autoplay=1&controls=0"
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                    ></iframe>
+                        controls
+                        autoPlay
+                        loop
+                        muted
+                        style={{ display: 'block', margin: '0 auto' }}
+                    >
+                        <source src="https://res.cloudinary.com/dmymftumw/video/upload/v1737604572/swiztr76qwo2llnnacj1.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </Box>
 
