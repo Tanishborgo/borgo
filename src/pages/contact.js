@@ -315,7 +315,7 @@ export default function contact() {
     className={styles['midForm-right-2']}
     style={{ color: 'white', textDecoration: 'none' }}
   >
-    info@borgo.ie
+     info@borgo.ie
   </Typography>
 </Link>
 
