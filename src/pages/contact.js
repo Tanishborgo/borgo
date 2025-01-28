@@ -312,7 +312,7 @@ export default function contact() {
             <Typography className={styles['midForm-right-1']}>Email</Typography>
            <Link href="mailto:info@borgo.ie" style={{ textDecoration: 'none' }}>
   <Typography className={styles['midForm-right-2']}>
-    info@borgo.ie 123
+    info@borgo.ie
   </Typography>
 </Link>
 
