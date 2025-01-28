@@ -311,7 +311,10 @@ export default function contact() {
           <Box className={styles['midForm-right-text']} >
             <Typography className={styles['midForm-right-1']}>Email</Typography>
            <Link href="mailto:info@borgo.ie" style={{ textDecoration: 'none' }}>
-  <Typography className={styles['midForm-right-2']}>
+   <Typography
+    className={styles['midForm-right-2']}
+    style={{ color: 'white', textDecoration: 'none' }}
+  >
     info@borgo.ie
   </Typography>
 </Link>
