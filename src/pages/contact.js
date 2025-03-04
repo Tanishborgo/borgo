@@ -55,7 +55,8 @@ export default function contact() {
   const [email, setEmail] = useState("");
   const [services, setServices] = useState([]);
   const [discuss, setDiscuss] = useState("");
-  const [errorMsg, setErrorMsg] = useState(false);
+  const [errorMsg, setErrorMsg] = useState({});
+
 
 
   const handleChange = (event) => {
@@ -73,49 +74,62 @@ export default function contact() {
   }, [])
 
   const onSubmit = async () => {
-    console.log("dd")
-    let formdata = {
-      personal_tax: personal_tax,
-      sole_trader: sole_trader,
-      company: company,
-      name: name,
-      business_name: business_name,
-      phone_number: phone_number,
-      email: email,
-      services: services,
-      discuss: discuss
+    console.log("Submitting form...");
+
+    let errors = {};
+
+    if (!name) errors.name = "Name is required";
+    if (!business_name) errors.business_name = "Business name is required";
+    if (!phone_number) errors.phone_number = "Phone number is required";
+    if (!email) errors.email = "Email is required";
+    if (services.length === 0) errors.services = "At least one service is required";
+    if (!discuss) errors.discuss = "This field is required";
+
+    // If any errors exist, set state and return
+    if (Object.keys(errors).length > 0) {
+      setErrorMsg(errors);
+      return;
     }
-    console.log("formdata", formdata)
-    if (business_name === "") {
-      setErrorMsg(true)
-    } else {
-      setErrorMsg(false)
-      try {
-        await axios.post('https://borgo.riverhousetechnologies.com/v1/details',
-          formdata,
-          { headers: { 'Content-Type': 'application/json' } })
-          .then((res) => {
-            console.log(res)
-            swal("Thank you for reaching out to us. Our team will get back soon.");
-            setPersonalTax(false)
-            setSoleTrader(false)
-            setCompany(false)
-            setBusinessName("")
-            setName("")
-            setEmail("")
-            setPhoneNumber("")
-            setServices([])
-            setDiscuss("")
-          })
-          .catch((e) => {
-            console.log(e)
-            swal("")
-          })
-      } catch (error) {
-        console.error(error);
-      }
+
+    // Clear errors if all fields are valid
+    setErrorMsg({});
+
+    let formdata = {
+      personal_tax,
+      sole_trader,
+      company,
+      name,
+      business_name,
+      phone_number,
+      email,
+      services,
+      discuss
+    };
+
+    try {
+      await axios.post('https://borgo.riverhousetechnologies.com/v1/details', formdata, {
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      swal("Thank you for reaching out to us. Our team will get back soon.");
+
+      // Reset form and errors
+      setPersonalTax(false);
+      setSoleTrader(false);
+      setCompany(false);
+      setBusinessName("");
+      setName("");
+      setEmail("");
+      setPhoneNumber("");
+      setServices([]);
+      setDiscuss("");
+      setErrorMsg({});
+    } catch (error) {
+      console.error(error);
+      swal("Something went wrong. Please try again.");
     }
   };
+
 
   return (
     <Grid className="position-relative">
@@ -193,6 +207,11 @@ export default function contact() {
                   required
                   onChange={(e) => { setName(e.target.value) }}
                 />
+                {errorMsg.name && (
+                  <div className="font-family-urbanist" style={{ marginLeft: '20px', marginTop: '10px', color: 'red', fontSize: '12px' }}>
+                    {errorMsg.name}
+                  </div>
+                )}
               </Grid>
               <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                 <label className="color-light-grey">Business Name</label>
@@ -205,11 +224,11 @@ export default function contact() {
                   required
                   onChange={(e) => { setBusinessName(e.target.value) }}
                 />
-                {
-                  errorMsg ?
-                    <div className="font-family-urbanist" style={{ marginLeft: '20px', marginTop: '10px', color: 'red', fontSize: '12px' }}>Bussiness name is required</div>
-                    : <br></br>
-                }
+                {errorMsg.business_name && (
+                  <div className="font-family-urbanist" style={{ marginLeft: '20px', marginTop: '10px', color: 'red', fontSize: '12px' }}>
+                    {errorMsg.business_name}
+                  </div>
+                )}
               </Grid>
             </Grid>
 
@@ -224,6 +243,11 @@ export default function contact() {
                   value={email}
                   onChange={(e) => { setEmail(e.target.value) }}
                 />
+                {errorMsg.email && (
+                  <div className="font-family-urbanist" style={{ marginLeft: '20px', marginTop: '10px', color: 'red', fontSize: '12px' }}>
+                    {errorMsg.email}
+                  </div>
+                )}
               </Grid>
               <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                 <label className="color-light-grey">Phone Number</label>
@@ -236,6 +260,11 @@ export default function contact() {
                   value={phone_number}
                   onChange={(e) => { setPhoneNumber(e.target.value) }}
                 />
+                {errorMsg.phone_number && (
+                  <div className="font-family-urbanist" style={{ marginLeft: '20px', marginTop: '10px', color: 'red', fontSize: '12px' }}>
+                    {errorMsg.phone_number}
+                  </div>
+                )}
               </Grid>
             </Grid>
 
@@ -272,6 +301,11 @@ export default function contact() {
                 <option value="other">Other</option>
               </select> */}
               </div>
+              {errorMsg.services && (
+                <div className="font-family-urbanist" style={{ marginLeft: '20px', marginTop: '10px', color: 'red', fontSize: '12px' }}>
+                  {errorMsg.services}
+                </div>
+              )}
             </Grid>
 
             <Grid>
@@ -283,6 +317,11 @@ export default function contact() {
                 value={discuss}
                 onChange={(e) => { setDiscuss(e.target.value) }}
               ></textarea>
+              {errorMsg.discuss && (
+                <div className="font-family-urbanist" style={{ marginLeft: '20px', marginTop: '10px', color: 'red', fontSize: '12px' }}>
+                  {errorMsg.discuss}
+                </div>
+              )}
             </Grid>
 
             <Box className={styles["top-center-text-4"]}>
@@ -310,14 +349,14 @@ export default function contact() {
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={styles['midForm-right']}>
           <Box className={styles['midForm-right-text']} >
             <Typography className={styles['midForm-right-1']}>Email</Typography>
-           <Link href="mailto:info@borgo.ie" style={{ textDecoration: 'none' }}>
-   <Typography
-    className={styles['midForm-right-2']}
-    style={{ color: 'white', textDecoration: 'none' }}
-  >
-     info@borgo.ie
-  </Typography>
-</Link>
+            <Link href="mailto:info@borgo.ie" style={{ textDecoration: 'none' }}>
+              <Typography
+                className={styles['midForm-right-2']}
+                style={{ color: 'white', textDecoration: 'none' }}
+              >
+                info@borgo.ie
+              </Typography>
+            </Link>
 
             <Box style={{ marginBlock: '50px' }}>
               <Typography className={styles['midForm-right-1']}>Address</Typography>
