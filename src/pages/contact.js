@@ -154,29 +154,29 @@ export default function contact() {
             <br></br>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-                <label class="main">Personal Tax
+                <label className="main">Personal Tax
                   <input type="checkbox"
                     checked={personal_tax}
                     onChange={(e) => { setPersonalTax(e.target.checked) }} />
-                  <span class="borgocheckbox"></span>
+                  <span className="borgocheckbox"></span>
                 </label>
               </Grid>
               <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-                <label class="main">Sole Trader
+                <label className="main">Sole Trader
                   <input type="checkbox"
                     checked={sole_trader}
                     onChange={(e) => { setSoleTrader(e.target.checked) }}
                   />
-                  <span class="borgocheckbox"></span>
+                  <span className="borgocheckbox"></span>
                 </label>
               </Grid>
               <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-                <label class="main">Company
+                <label className="main">Company
                   <input type="checkbox"
                     checked={company}
                     onChange={(e) => { setCompany(e.target.checked) }}
                   />
-                  <span class="borgocheckbox"></span>
+                  <span className="borgocheckbox"></span>
                 </label>
               </Grid>
             </Grid>
@@ -279,7 +279,7 @@ export default function contact() {
               <textarea
                 rows={4}
                 placeholder="What would you like to discuss?"
-                class={styles["textareaBox"]}
+                className={styles["textareaBox"]}
                 value={discuss}
                 onChange={(e) => { setDiscuss(e.target.value) }}
               ></textarea>
