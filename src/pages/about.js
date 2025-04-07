@@ -32,7 +32,7 @@ export default function About() {
   return (
     <Grid className='position-relative'>
       <Head>
-        <title>About Us | Expert Accounting Support for Your Business</title>
+        <title>About Us | Expert Accounting Support for Your Business </title>
         <meta name="description" content="Borgo provides expert accounting services, so you can focus on growing your business. Meet our team and see how we support your financial success." />
       </Head>
       <Navbar />
