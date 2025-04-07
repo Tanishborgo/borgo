@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+.center-container {
+    height: 70vh;
+    width: 100vw;
+    z-index: 2;
+    position: absolute;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.center-box {
+    width: 75% !important;
+    display: flex !important;
+    margin-top: -20px !important;
+}
+
+.center-box-right {
+    width: 45% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.center-box-left {
+    width: 55% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+}
+
+.center-box-left-1 {
+    font-family: 'Mulish', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 80px !important;
+    line-height: 88px !important;
+    letter-spacing: -1.6px !important;
+    color: #C54D1F !important;
+}
+
+.center-box-left-2 {
+    font-family: 'Mulish' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 80px !important;
+    line-height: 88px !important;
+    letter-spacing: -1.6px !important;
+    color: #DDDDDD;
+    margin-bottom: 30px !important;
+}
+
+.error-anima{
+    color: #DDDDDD;
+    animation: example 5s infinite;
+}
+
+@keyframes example {
+    0%   {color: #C44D1F !important;}
+    10%  {color: #DDDDDD !important;}
+    20%  {color: #C44D1F !important;}
+    30% {color: #DDDDDD !important;}
+    40%   {color: #C44D1F !important;}
+    50%  {color: #DDDDDD !important;}
+    60%  {color: #C44D1F !important;}
+    70% {color: #DDDDDD !important;}
+    80%  {color: #C44D1F !important;}
+    90% {color: #DDDDDD !important;}
+    100%  {color: #C44D1F !important;}
+}
+
+.center-box-left-3 {
+    font-family: 'Mulish' !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 24px !important;
+    line-height: 29px !important;
+    letter-spacing: -0.48px !important;
+    color: #DDDDDD !important;
+}
+
+.center-box-left-4 {
+    font-family: 'Mulish' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    color: #DDDDDD !important;
+
+}
+
+.center-box-left-4-2 {
+    background: #C54D1F !important;
+    border-radius: 119px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    Width: 127px !important;
+    Height: 44px !important;
+    margin: 5px 20px !important;
+    cursor: pointer !important;
+}
+
+.center-box-left-4-3 {
+    display: flex !important;
+    align-items: center !important;
+    height: 80px !important;
+}
+
+
+.watch {
+    height: auto !important;
+    margin-bottom: 20px;
+    /* width: 30vw !important; */
+}
+
+.Fill-Left {
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 30px !important;
+}
+
+.Spike-Left {
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 0 !important;
+}
+
+.Fill-Right {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 0 !important;
+}
+
+.Spike-Right {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 200px !important;
+}
+
+@media screen and (max-width: 700px) {
+
+    .Spike-Right {
+        display: none !important;
+    }
+
+    .Spike-Left {
+        display: none !important;
+    }
+
+    .Fill-Right {
+        display: none !important;
+    }
+
+    .Fill-Left {
+        display: none !important;
+    }
+
+    .center-box-right {
+        display: none !important;
+    }
+
+    .center-box {
+        font-size: smaller !important;
+        width: 100% !important;
+    }
+
+    .center-box-left {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+}

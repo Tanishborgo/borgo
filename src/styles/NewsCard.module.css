@@ -1,0 +1,160 @@
+.mainCard{
+    width:468px;
+    height:719px;
+    /* border:1px solid white; */
+    position:relative;
+    /* margin-top: 70px; */
+}
+.mainImage{
+    width:100%;
+    height: 100%;
+    position: absolute;
+}
+
+.head{
+    position: absolute;
+    top:70px;
+    left:35px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.64px;
+    color: #DDDDDD;
+
+}
+.text{
+    position: absolute;top:160px;left:35px;
+    height: 81px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.36px;
+    color: #DDDDDD;
+}
+.card-image{
+    position: absolute;
+    bottom: 115px;
+    left: 0;
+}
+.read{
+    position: absolute;
+    bottom: 40px;left:35px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.36px;
+    color: #DDDDDD;
+}
+.arrow{
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+
+}
+.mainImage-sm{
+    display: none;
+}
+.text-sm{
+    display: none;
+}
+.card-image_sm{
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+
+    .mainCard{
+        margin-top: 35px !important;
+        width:327px !important;
+        height:688px;
+        /* border: 1px solid white; */
+        position: relative;
+    }
+    .mainImage{
+        display: none;
+    }
+/* 
+    .xyz{
+        position: absolute!important;
+    } */
+    .mainImage-sm{
+        display: block;
+        /* z-index: -1; */
+        position: absolute;
+        /* right: 10px; */
+        /* left: -25px; */
+        /* width:100%; */
+        width: 327px;
+        height:688px;
+
+    }
+
+
+    .head{
+        margin-left: -10px;
+        top: 75px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: -0.48px;
+    }   
+    .text{
+        display: none;
+        
+    } 
+    .text-sm{
+        margin-left: -10px;
+        position: absolute;top:150px;left:35px;
+        /* height: 81px; */
+        font-family: 'Mulish';
+        font-style: normal;
+        color: #DDDDDD;
+        display: block;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: -0.36px;
+        /* border: 1px solid white; */
+        width: 260px;
+    }
+
+    .card-image{
+        display: none;
+    }
+
+    .card-image_sm{
+        display: block;
+        position: absolute;
+        bottom: 80px;
+        left: 0;
+    }
+    .card-image_sm_image{
+        /* width: 270px; */
+        /* height: 300px; */
+        /* left : 20px; */
+
+    }
+
+    .read{
+        margin-left: -10px;
+        bottom: 30px;
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: -0.36px;
+    }
+    .arrow{
+        bottom: 30px;
+        right: 25px;
+    }
+    
+
+}
