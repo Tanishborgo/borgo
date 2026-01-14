@@ -199,7 +199,7 @@ export default function Navbar(props) {
                             style={{ width: "158px", height: "36px", paddingInline: "14px", paddingBlock: "12px", textAlign: 'center', position: "relative", zIndex: 9999 }}
                         >
                             <a
-                                href="https://calendly.com/d/z84-783-bw8/discovery-call" target='_blank' style={{ textDecoration: "none", color: "#DDDDDD" }}
+                                href="https://calendly.com/joanne-mcdonnell-borgo/15min" target='_blank' style={{ textDecoration: "none", color: "#DDDDDD" }}
                             >
                                 {" "}SCHEDULE A CALL{" "}
                             </a>
@@ -304,7 +304,7 @@ export default function Navbar(props) {
                                     style={{ width: "158px", height: "36px", paddingInline: "14px", paddingBlock: "12px", textAlign: 'center', position: "relative", zIndex: 9999 }}
                                 >
                                     <a
-                                        href="https://calendly.com/d/z84-783-bw8/discovery-call" target='_blank' style={{ textDecoration: "none", color: "#DDDDDD" }}
+                                        href="https://calendly.com/joanne-mcdonnell-borgo/15min" target='_blank' style={{ textDecoration: "none", color: "#DDDDDD" }}
                                     >
                                         {" "}SCHEDULE A CALL{" "}
                                     </a>
