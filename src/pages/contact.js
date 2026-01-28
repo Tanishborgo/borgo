@@ -108,7 +108,7 @@ export default function contact() {
     };
 
     try {
-      await axios.post('https://borgo.riverhousetechnologies.com/v1/details', formdata, {
+      await axios.post('/api/contact', formdata, {
         headers: { 'Content-Type': 'application/json' }
       });
 
