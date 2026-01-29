@@ -27,7 +27,7 @@ export default async function handler(req, res) {
     });
 
     await transporter.sendMail({
-      from: `"Borgo Website" <${process.env.EMAIL_USER}>`,
+      from: "Borgo Website" <${process.env.EMAIL_USER}>,
       to: process.env.EMAIL_USER,
       subject: "New Contact Form Inquiry",
       html: `
@@ -36,12 +36,10 @@ export default async function handler(req, res) {
         <p><b>Business:</b> ${business_name}</p>
         <p><b>Email:</b> ${email}</p>
         <p><b>Phone:</b> ${phone_number}</p>
-        <p><b>Services:</b> ${
-          services && services.length > 0 ? services.join(", ") : "None selected"
-        }</p>
-        <p><b>Personal Tax:</b> ${personal_tax ? "Yes" : "No"}</p>
-        <p><b>Sole Trader:</b> ${sole_trader ? "Yes" : "No"}</p>
-        <p><b>Company:</b> ${company ? "Yes" : "No"}</p>
+        <p><b>Services:</b> ${services && services.length > 0 ? services.join(", ") : 'None selected'}</p>
+        <p><b>Personal Tax:</b> ${personal_tax === true ? 'Yes' : 'No'}</p>
+        <p><b>Sole Trader:</b> ${sole_trader === true ? 'Yes' : 'No'}</p>
+        <p><b>Company:</b> ${company === true ? 'Yes' : 'No'}</p>
         <p><b>Message:</b><br/>${discuss}</p>
       `,
     });
