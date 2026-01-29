@@ -63,7 +63,7 @@ export default function Navbar(props) {
             <Box sx={{ justifyContent: 'space-between', display: 'flex', margin: '30px', marginTop: '40px' }}>
                 <div>
                     <Link href="/" style={{ textDecoration: 'none' }}>
-                        <Image src={borgo} width='134' height="48" />
+                        <Image src={borgo} alt="Borgo logo" width='134' height="48" />
                     </Link>
                 </div>
                 <IconButton
@@ -187,7 +187,7 @@ export default function Navbar(props) {
                 }}>
                     <div>
                         <Link href="/" style={{ textDecoration: 'none' }}>
-                            <Image src={borgo} className={styles['logo-nav']} />
+                            <Image src={borgo} alt="Borgo logo" className={styles['logo-nav']} />
                         </Link>
                     </div>
 
