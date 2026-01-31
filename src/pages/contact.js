@@ -106,7 +106,7 @@ export default function contact() {
     };
 
     try {
-      await axios.post('/api/contact', formdata, {
+      const response = await axios.post('/api/contact/', formdata, {
         headers: { 'Content-Type': 'application/json' }
       });
 
@@ -124,8 +124,16 @@ export default function contact() {
       setDiscuss("");
       setErrorMsg({});
     } catch (error) {
-      console.error(error);
-      swal("Something went wrong. Please try again.");
+      console.error("Contact form error:", error);
+      
+      // Check if it's a validation error from the server
+      if (error.response && error.response.status === 400 && error.response.data.errors) {
+        // Display server-side validation errors
+        setErrorMsg(error.response.data.errors);
+        swal("Please fix the errors in the form.");
+      } else {
+        swal("Something went wrong. Please try again.");
+      }
     }
   };
 

@@ -1,8 +1,17 @@
 import nodemailer from "nodemailer";
 
+const isNonEmptyString = (value) => typeof value === "string" && value.trim().length > 0;
+const isValidEmail = (value) =>
+  typeof value === "string" &&
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method not allowed" });
+    res.setHeader("Allow", "POST");
+    return res.status(405).json({
+      message: "Method not allowed",
+      error: "Only POST is supported",
+    });
   }
 
   const {
@@ -16,6 +25,34 @@ export default async function handler(req, res) {
     services,
     discuss,
   } = req.body;
+
+  // Server-side validation
+  const errors = {};
+
+  if (!isNonEmptyString(name)) errors.name = "Name is required";
+  if (!isNonEmptyString(business_name)) errors.business_name = "Business name is required";
+  if (!isNonEmptyString(phone_number)) errors.phone_number = "Phone number is required";
+  if (!isValidEmail(email)) errors.email = "Valid email is required";
+  if (!Array.isArray(services) || services.length === 0) {
+    errors.services = "At least one service is required";
+  }
+  if (!isNonEmptyString(discuss)) errors.discuss = "Message is required";
+
+  if (Object.keys(errors).length > 0) {
+    return res.status(400).json({
+      message: "Validation failed",
+      errors,
+    });
+  }
+
+  // Check environment variables
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    console.error("EMAIL_USER or EMAIL_PASS not configured");
+    return res.status(500).json({
+      message: "Server misconfiguration",
+      error: "Email service not configured",
+    });
+  }
 
   try {
     const transporter = nodemailer.createTransport({
@@ -44,9 +81,15 @@ export default async function handler(req, res) {
       `,
     });
 
-    return res.status(200).json({ success: true });
+    return res.status(200).json({
+      success: true,
+      message: "Message sent successfully",
+    });
   } catch (error) {
-    console.error(error);
-    return res.status(500).json({ message: "Email failed" });
+    console.error("Contact form error:", error);
+    return res.status(500).json({
+      message: "Email failed",
+      error: "Failed to send email. Please try again.",
+    });
   }
 }
