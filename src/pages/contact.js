@@ -2,16 +2,14 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Box, Grid, Typography } from "@mui/material";
-import Contact1 from "../../public/assests/aboutspike1.png";
 import Contact2 from "../../public/assests/Group32.png";
 import Contact3 from "../../public/assests/Fill1.png";
 import Contact4 from "../../public/assests/spikecopy.png";
 import Contact5 from '../../public/assests/News/contactSpikeMid.svg'
 import Image from "next/image";
 import styles from "@/styles/Contact.module.css";
-import { FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import axios from "axios";
-import OutlinedInput from '@mui/material/OutlinedInput';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import swal from 'sweetalert';
@@ -143,13 +141,13 @@ export default function contact() {
         <Box className='margin-auto width-100 position-relative'>
        
           <Box className='display-none-sm position-absolute right-0 contact-fig-2'>
-            <Image src={Contact2} width='100%' height="100%" />
+            <Image src={Contact2} alt="Contact decoration" width='100%' height="100%" />
           </Box>
           <Box className={styles["contactFill"]}>
-            <Image src={Contact3} width="100%" height="100%" />
+            <Image src={Contact3} alt="Contact fill" width="100%" height="100%" />
           </Box>
           <Box className={styles["contactSpikeMid"]}>
-            <Image src={Contact5} width="100%" height="100%" />
+            <Image src={Contact5} alt="Contact spike" width="100%" height="100%" />
           </Box>
           <Box className='margin-auto flex-direction-column width-60 width-100-sm div-center-sm position-relative' sx={{ zIndex: '5' }}>
             <Typography className='font-18 weight-400 color-orange mt-20-sm font-mulish'>CONTACT US</Typography>
@@ -373,8 +371,10 @@ export default function contact() {
                 <a href="tel:+353 1 211 8010" className={styles['midForm-right-2']} style={{ color: '#fff', textDecoration: 'none' }}> +353 1 211 8010</a>
               </Box>
               <Box>
-                <a href="https://www.linkedin.com/company/borgo-accounting/?viewAsMember=true"
+                <a 
+                  href="https://www.linkedin.com/company/borgo-accounting/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   style={{ border: '2px solid #C44D1F', borderRadius: '50%', height: '40px', width: '40px', marginInline: '10px' }}
                   className='div-center'>
                   <FaLinkedinIn width='100%' height="100%" color="#808080" size={'20px'} />
@@ -398,7 +398,7 @@ export default function contact() {
           </Typography>
           <br></br>
           {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.2953024475687!2d-6.227462387803609!3d53.44530726719905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486710f8846ed6c5%3A0x2a0c6c86fd55bcee!2sColumba%20House%2C%20Lakeshore%20Dr%2C%20Airside%20Retail%20Park%2C%20Swords%2C%20Co.%20Dublin%2C%20Ireland!5e0!3m2!1sen!2sin!4v1683269886692!5m2!1sen!2sin" className={styles["contactmap"]} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.2954796123913!2d-6.224882099999999!3d53.445304099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486710f8846ed6c5%3A0x2a0c6c86fd55bcee!2sColumba%20House%2C%20Lakeshore%20Dr%2C%20Airside%20Retail%20Park%2C%20Swords%2C%20Co.%20Dublin%2C%20Ireland!5e0!3m2!1sen!2sin!4v1684130339393!5m2!1sen!2sin" className={styles["contactmap"]} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.2954796123913!2d-6.224882099999999!3d53.445304099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486710f8846ed6c5%3A0x2a0c6c86fd55bcee!2sColumba%20House%2C%20Lakeshore%20Dr%2C%20Airside%20Retail%20Park%2C%20Swords%2C%20Co.%20Dublin%2C%20Ireland!5e0!3m2!1sen!2sin!4v1684130339393!5m2!1sen!2sin" className={styles["contactmap"]} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </Box>
         {/* </Grid> */}
       </Grid>
@@ -417,7 +417,7 @@ export default function contact() {
               className="display-none-sm position-absolute right-0"
               sx={{ top: "-280px", zIndex: 1 }}
             >
-              <Image src={Contact4} width="100%" height="100%" />
+              <Image src={Contact4} alt="Client testimonial" width="100%" height="100%" />
             </Box>
             <div
               style={{
