@@ -93,47 +93,56 @@ export default function contact() {
     // Clear errors if all fields are valid
     setErrorMsg({});
 
+    // Prepare form data for Formspree
     let formdata = {
-      personal_tax,
-      sole_trader,
-      company,
       name,
       business_name,
       phone_number,
       email,
-      services,
-      discuss
+      services: services.join(", "),
+      message: discuss,
+      personal_tax: personal_tax ? 'Yes' : 'No',
+      sole_trader: sole_trader ? 'Yes' : 'No',
+      company: company ? 'Yes' : 'No',
+      _replyto: email, // Formspree uses this for reply-to
+      _subject: "New Contact Form Inquiry from Borgo Website"
     };
 
     try {
-      const response = await axios.post('/api/contact/', formdata, {
-        headers: { 'Content-Type': 'application/json' }
-      });
+      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+      
+      if (!formspreeId) {
+        throw new Error("Formspree endpoint not configured");
+      }
 
-      swal("Thank you for reaching out to us. Our team will get back soon.");
+      const response = await axios.post(
+        `https://formspree.io/f/${formspreeId}`,
+        formdata,
+        {
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+        }
+      );
 
-      // Reset form and errors
-      setPersonalTax(false);
-      setSoleTrader(false);
-      setCompany(false);
-      setBusinessName("");
-      setName("");
-      setEmail("");
-      setPhoneNumber("");
-      setServices([]);
-      setDiscuss("");
-      setErrorMsg({});
+      if (response.data.ok || response.status === 200) {
+        swal("Thank you for reaching out to us. Our team will get back soon.");
+
+        // Reset form and errors
+        setPersonalTax(false);
+        setSoleTrader(false);
+        setCompany(false);
+        setBusinessName("");
+        setName("");
+        setEmail("");
+        setPhoneNumber("");
+        setServices([]);
+        setDiscuss("");
+        setErrorMsg({});
+      } else {
+        throw new Error("Form submission failed");
+      }
     } catch (error) {
       console.error("Contact form error:", error);
-      
-      // Check if it's a validation error from the server
-      if (error.response && error.response.status === 400 && error.response.data.errors) {
-        // Display server-side validation errors
-        setErrorMsg(error.response.data.errors);
-        swal("Please fix the errors in the form.");
-      } else {
-        swal("Something went wrong. Please try again.");
-      }
+      swal("Something went wrong. Please try again.");
     }
   };
 
